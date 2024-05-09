@@ -1,16 +1,15 @@
 @extends('layouts.app')
 
-@section('title') Laravel Movie @endsection
-
+@section('page-title')
+    Laraflix
+@endsection
 
 @section('content')
-
-    <div class="container">
-        <h1>Laravel Movie</h1>
-
-        <div class="p-5 mb-4 bg-dark text-white">
-            <div class="container-fluid py-5">
-                <h1 class="display-5 fw-bold">Welcome to Laravel Movies</h1>
+    <div class="bg-dark">
+        <div class="p-5 mb-4 text-white">
+            <div class="container py-5">
+                <h1 class="display-5 fw-bold">Laraflix</h1>
+                <h3 class="display-10 fw-bold">Welcome to Laravel Movies</h3>
                 <p class="col-md-8 fs-4">
                     This is a simple movies management system.
                 </p>
@@ -29,9 +28,20 @@
                     <div class="card">
                         <div class="card-body">
                             <h3 class="card-title">
-                                {{ $book->title }}
+                                {{ $movie->title }}
                             </h3>
-                            <p>{{ $book->plot }}</p>
+                            <h5>
+                                {{ $movie->original_title }}
+                            </h5>
+                            <h5>
+                                {{ $movie->nationality }}
+                            </h5>
+                            <h5>
+                                {{ $movie->date }}
+                            </h5>
+                            <h5>
+                                {{ $movie->vote }}
+                            </h5>
                         </div>
                     </div>
                 </div>
@@ -45,3 +55,4 @@
 
         </div>
     </div>
+@endsection
